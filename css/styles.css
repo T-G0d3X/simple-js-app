@@ -4,18 +4,16 @@
     padding: 0;
 }
 
-html {
-    background-image: url("/img/clayton-robbins-u3ZUSIH_eis-unsplash.jpg");
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-
 body {
+    height: inherit;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    line-height: 35px;
+    background-image: url("/img/clayton-robbins-u3ZUSIH_eis-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom bottom;
+    background-size: cover;
+    
 }
 
 header {
@@ -29,11 +27,11 @@ header {
     color: white;
 }
 
-main {
-    width: 90vw;
-    margin: 0 auto;
+.container {
+    margin: 0;
     padding: 30px 20px;
     min-height: calc(100vh - 97px - 40px);
+    overflow: auto;
 }
 
 .btn {
@@ -53,24 +51,16 @@ main {
     color: white;
 }
 
-.pokemon-list {
+ul.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(4, 1fr);
     list-style: none;
-    margin: 0;
+    max-height: 50%;
 }
 
-.pokemon-info-clicked {
-    background-color: #2c70be;
-    height: 150px;
-    width: 90%;
-    opacity: .9;
-    border-radius: 50px;
+li {
     text-align: center;
-}
-
-.pokemon-info-clicked h3 {
-    color: white;
-    font-weight: 600;
-    font-family: cursive;
 }
 
 footer {
@@ -83,3 +73,21 @@ footer {
     font-weight: 100;
     border: 1px solid pink;
 }
+
+@media all and (min-width: 1024px) and (max-width: 2000px) {
+    
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    
+}
+ 
+@media all and (min-width: 320px) and (max-width: 768px) { 
+   
+}
+ 
+@media all and (max-width: 320px) {
+    .btn {
+        font-size: .6em;
+    }
+ }
