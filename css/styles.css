@@ -4,21 +4,23 @@
     padding: 0;
 }
 
+html {
+    background-color: #062993;
+}
+
 body {
-    height: inherit;
+    margin-top: 0;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    background-image: url("/img/clayton-robbins-u3ZUSIH_eis-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom bottom;
-    background-size: cover;
-    
+    background-color: #FFA033;
+    border: 2px solid gold;
+    border-radius: 10px;
 }
 
 header {
     text-align: center;
-    background-color: #2c70be;
+    background-color: #321065;
     letter-spacing: 5px;
     font-family: cursive;
     border: 1px solid pink;
@@ -35,10 +37,10 @@ header {
 }
 
 .btn {
-    background-color: skyblue;
+    background-color: #321065;
     outline: none;
     border: none;
-    color: #333;
+    color: #FFD4A8;
     padding: 10px;
     border-radius: 30px;
     font-weight: bold;
@@ -47,8 +49,13 @@ header {
 }
 
 .btn:hover {
-    background-color: #2c70be;
+    background-color:#321065;
     color: white;
+}
+
+.btn-form {
+    background-color: #FFD4A8;
+    color: #FFA033;
 }
 
 ul.pokemon-list {
@@ -62,10 +69,119 @@ ul.pokemon-list {
 li {
     text-align: center;
 }
+/*     FORM     */
+.input-wrapper {
+    margin-bottom: 10px;
+}
+  
+label {
+display: block;
+min-width: 75px;
+padding-bottom: .3px;
+margin-bottom: 0;
+font-family: cursive;
+font-size: 15px;
+}
 
+.error-message {
+color: red;
+font-size: 0.8em;
+}
+
+/*     MODAL  DEFAULT STYLE   */
+#modal-container {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;  /* to be above everything */
+    overflow: auto;
+    /* to center the modal */
+    display: grid;
+    text-align: center;
+
+    /* TO HIDE THE MODAL */
+    display: none;
+}
+
+#modal-container.is-visible {
+    display: block;
+}
+
+.modal {
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+    background: #69a2e2;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    font-family: cursive;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#show-modal, #show-dialog {
+    outline: none;
+    background: #69a2e2;;
+    color: #333;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.modal-close {
+    display: inline-flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+    float: right;
+}
+
+.modal h1 {
+    margin-top: 0;
+}
+
+.modal p {
+    margin-bottom: 0;
+}
+
+.hideBtn {
+    display: none;
+}
+
+button.modal-confirm, button.modal-cancel {
+    background-color: skyblue;
+    border: none;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-family: cursive;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none   ;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+}
 footer {
     text-align: center;
-    background-color: #2c70be;
+    background-color: #321065;
     color: white;
     padding: 20px;
     border-radius: 50px;
@@ -75,19 +191,48 @@ footer {
 }
 
 @media all and (min-width: 1024px) and (max-width: 2000px) {
-    
+    div.modal {
+        margin-top: 200px;
+        width: 60%;
+    }
+    img {
+        image-rendering: optimizeQuality;
+        transform: scale(1.6);
+        width: auto;
+    }
  }
  
 @media all and (min-width: 768px) and (max-width: 1024px) { 
-    
-}
- 
-@media all and (min-width: 320px) and (max-width: 768px) { 
+    div.modal {
+        margin-top: 200px;
+        width: 60%;
+    }
+    img {
+        image-rendering: optimizeQuality;
+        height: 170px;
+        width: auto;
+    }
    
 }
  
+@media all and (min-width: 320px) and (max-width: 768px) { 
+    div.modal {
+        margin-top: 130px;
+    }
+    img {
+        image-rendering: optimizeQuality;
+        height: 170px;
+        width: auto;
+    }
+}
+ 
 @media all and (max-width: 320px) {
-    .btn {
-        font-size: .6em;
+    div.modal {
+        margin-top: 200px;
+    }
+    img {
+        image-rendering: optimizeQuality;
+        height: 150px;
+        width: auto;
     }
  }
