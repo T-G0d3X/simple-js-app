@@ -14,8 +14,27 @@
         <h1>Pokedex</h1>
     </header>
     <main class="container">
-        <ul class="pokemon-list"></ul>
-        
+        <button class="hideBtn" id="show-modal"></button>
+        <button class="hideBtn" id="show-dialog"></button>
+        <div id="modal-container">
+            <div class="modal-container img_modal"></div>
+            <div id="image-container"></div>
+        </div>
+        <div>
+            <ul class="pokemon-list"></ul>
+        </div>
+        <form id="register-form">
+            <div class="input-wrapper">
+                <label for="email">E-mail</label>
+                <input id="email">
+            </div>
+            <div class="input-wrapper">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+            </div>
+
+            <button class="btn btn-form">Register for more pokemons</button>
+        </form>
     </main>
     <footer>
         <h5>Get your pokemons here!</h5>
