@@ -140,14 +140,13 @@ let pokemonRepository = (function () {
     contentElement.innerText = text;
 
     // setting image in modal
-    let container = document.querySelector('#image-container');
     let myImage = document.createElement('img');
     myImage.src = img;
 
-    modal.appendChild(myImage);
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
+    modal.appendChild(myImage);
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add('is-visible');
